@@ -26,6 +26,7 @@
         
         body, html {
             height: 100%;
+            background-color: var(--bg-light);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             line-height: 1.5;  
         }
@@ -34,6 +35,7 @@
             width: 100%;
             height: 100vh;
             border: none;
+            background-color: transparent; /* Make iframe background transparent */
         }
         
         .noscript-warning {
@@ -97,16 +99,6 @@
         title="Dashboard"
         allowfullscreen>
     </iframe>
-
-    <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const iframe = document.querySelector(".iframe-container");
-    
-        iframe.addEventListener("load", function () {
-            document.body.style.backgroundColor = "#f8f9fa";
-        });
-    });
-    </script>
     
 </body>
 </html>
