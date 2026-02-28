@@ -99,13 +99,19 @@
             JavaScript is disabled. Please enable it for a better experience!
         </div>
     </noscript>
-    
+
     <iframe 
-        src="https://gcmsnotes.com/client-order-tracker/" 
         class="iframe-container"
         title="Dashboard"
         allowfullscreen>
     </iframe>
+    <script>
+    const iframe = document.querySelector('iframe');
+    const baseUrl = 'https://gcmsnotes.com/client-order-tracker/';
+    const isPWA   = window.matchMedia('(display-mode: standalone)').matches;
+
+    iframe.src = isPWA ? baseUrl + '?pwa=1' : baseUrl;
+    </script>
     
 </body>
 </html>
